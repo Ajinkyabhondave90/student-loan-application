@@ -1,0 +1,8 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "Start database", "type": "shell", "command": "docker compose up -d" },
+    { "label": "Run backend", "type": "shell", "command": "mvn spring-boot:run", "options": { "cwd": "${workspaceFolder}/backend" }, "isBackground": true, "problemMatcher": [] },
+    { "label": "Run frontend", "type": "shell", "command": "npm install && npm run dev", "options": { "cwd": "${workspaceFolder}/frontend" }, "isBackground": true, "problemMatcher": [] }
+  ]
+}
